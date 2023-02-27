@@ -31,7 +31,7 @@ services:
       timeout: 10s
       retries: 10
   authors-service:
-    image: lenin1999/app-authors:cuascota-1.0.0
+    image: jaimesalvador/app-authors:cuascota-1.0.0
     expose:
       - 8000
     deploy:
@@ -54,7 +54,7 @@ services:
       - "traefik.http.middlewares.authors.stripprefix.prefixes=/app2"
       - "traefik.http.routers.authors.middlewares=authors"
   book-service:
-    image: lenin1999/app-books:cuascota-1.0.0
+    image: jaimesalvador/app-books:cuascota-1.0.0
     expose:
       - 9000
     deploy:
